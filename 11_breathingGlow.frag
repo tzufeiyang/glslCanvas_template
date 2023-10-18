@@ -24,13 +24,13 @@ void main() {
     float circle_dist = abs(dist-0.512);								//光環大小
     
     //動態呼吸
-    float breathing=sin(u_time*2.0*pi/4.0)*0.5+0.5;						//option1
+    float breathing=sin(u_time*2.0*pi/4.0)*0.5+0.5;						//option1，sin(2*pi*x)的週期就是1，方便調整，除4就是4倍時長
     //float breathing=(exp(sin(u_time/2.0*pi)) - 0.36787944)*0.42545906412; 			//option2 正確
     //float strength =(0.2*breathing*dir+0.180);			//[0.2~0.3]			//光暈強度加上動態時間營造呼吸感
-    float strength =(0.2*breathing+0.180);			//[0.2~0.3]			//光暈強度加上動態時間營造呼吸感
-    float thickness=(0.1*breathing+0.084);			//[0.1~0.2]			//光環厚度 營造呼吸感
+    float strength =(0.2*breathing+0.1);			//讓[0.0~1.0]的sin改在[0.2~0.3]間浮動	    //光暈強度加上動態時間營造呼吸感
+    float thickness=(0.1*breathing+0.1);			//[0.1~0.2]，同上		                //光環厚度 營造呼吸感
     float glow_circle = glow(circle_dist, strength, thickness);
-    gl_FragColor = vec4(vec3(glow_circle)*vec3(1.0, 0.5, 0.25),1.0);
+    gl_FragColor = vec4(vec3(glow_circle)*vec3(1.0, 0.5, 0.25),1.0);    //顏色用乘的
 }
 
 
