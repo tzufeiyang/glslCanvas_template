@@ -1,4 +1,3 @@
-// Author:CMH
 // Title:BreathingGlow+noise
 
 #ifdef GL_ES
