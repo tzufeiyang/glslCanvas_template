@@ -7,7 +7,7 @@
         <script type="text/javascript" src="dist/GlslCanvas.js"></script>
         <script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
 
-        <style>
+            <style>
             body {
                 background: #101515;
             }
@@ -25,6 +25,8 @@
 
             #credits {
                 position: absolute; 
+                width: 23%;
+                height: fit-content;
                 bottom: 10px; 
                 right: 15px; 
                 text-align: right;
@@ -45,12 +47,15 @@
             #title {
                 font-size: 24px;
                 font-weight: 600;
+                line-height: 1em;
             }
 
             #author {
                 font-size: 14px; 
                 font-style: italic;
                 font-weight: 100;
+                color: white;
+                line-height: 1.5em;
             }
 
             #next a {
@@ -71,10 +76,10 @@
 
     </head>
     <body>
-        <canvas id="glslCanvas" data-fragment-url="Hatching.frag" width="800" height="600" data-textures="data/whale.mp4, data/star_1.jpg, data/star_2.jpg, data/star_3.jpg, data/star_4.jpg, data/star_5.jpg, data/star_6.jpg, data/whale.mp4"></canvas>
+        <canvas id="glslCanvas" data-fragment-url="Hatching_2.frag" width="800" height="600" data-textures="data/whale.mp4, data/star_1.jpg, data/star_2.jpg, data/star_3.jpg, data/star_4.jpg, data/star_5.jpg, data/star_6.jpg, data/whale.mp4"></canvas>
         <div id="credits">
-            <p class="label" id="title">I love Daisuke Igarashi</p>
-            <p class="label" id="author">by Tzu-Fei Yang</p>
+            <p class="label" id="title">I love Daisuke Igarashi v.1</p>
+            <p class="label" id="author">by 楊子霏<br>我嘗試以繪製hatching texture模仿漫畫家五十嵐大介的筆觸。</p>
         </div>
         
         <div id="next">
